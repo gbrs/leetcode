@@ -17,6 +17,19 @@ class Solution:
         return ''.join(answer)
 
 
+'''class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        """чье-то очень красивое решение.
+        Срезы  позволяют не заморачиваться с проверками.
+        Только конкатенацию приходится делать
+        """
+        return (
+                ''.join(a + b for a, b in zip(word1, word2))
+                + word1[len(word2):]
+                + word2[len(word1):]
+        )
+'''
+
 word_1 = "abcd"
 word_2 = "pqrs"
 solution = Solution()
