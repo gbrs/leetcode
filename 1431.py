@@ -1,5 +1,6 @@
 '''
-неправильно понял задание: максимум не среди уже просмотренных, а максимум среди всех
+сразу вычслить один раз enough = max(candies) - extraCandies
+надо было генератор списков: [i >= enough for i in candies]
 '''
 
 class Solution(object):
@@ -10,22 +11,20 @@ class Solution(object):
         :rtype: List[bool]
         """
 
-        answer_list = [True]
-        max_number = candies[0]
+        answer_list = []
+        mx = max(candies)
 
-        for amount in candies[1:]:
-            if amount + extraCandies > max_number:
+        for amount in candies:
+            if amount + extraCandies >= mx:
                 answer_list.append(True)
             else:
                 answer_list.append(False)
-            if amount > max_number:
-                max_number = amount
 
         return answer_list
 
 
-candies = [12, 1, 12]
-extraCandies = 10
+candies = [4,2,1,1,2]
+extraCandies = 1
 
 solution = Solution()
 
