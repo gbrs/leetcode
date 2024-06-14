@@ -5,7 +5,7 @@
 #          otherwise return 0
 # def guess(num):
 
-class Solution():
+class Solution:
     def guessNumber(self, n):
         """
         :type n: int
